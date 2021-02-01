@@ -2,6 +2,7 @@
 # This is a YAML-formatted file.
 
 replica_count: 2
-user_name: user
 db_name: admin
+user_name: user
+user_password: 58LObjiMpxcjP1sMDW
 # can add others
