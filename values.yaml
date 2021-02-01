@@ -1,6 +1,6 @@
 # Default values for operator.
 # This is a YAML-formatted file.
-
+namespace: nsx
 replica_count: 2
 db_name: admin
 user_name: user
