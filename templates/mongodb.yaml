@@ -4,15 +4,15 @@ kind: MongoDB
 metadata:
   name: example-mongodb
 spec:
-  members: {{ .values.replica_count }}
+  members: {{ .Values.replica_count }}
   type: ReplicaSet
   version: "4.2.6"
   security:
     authentication:
       modes: ["SCRAM"]
   users:
-    - name: {{ .values.user_name }}
-      db: {{ .values.db_name }}
+    - name: {{ .Values.user_name }}
+      db: {{ .Values.db_name }}
       passwordSecretRef: # a reference to the secret that will be used to generate the user's password
         name: my-user-password
       roles:
