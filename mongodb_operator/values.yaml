@@ -1,0 +1,5 @@
+# Default values for operator.
+# This is a YAML-formatted file.
+
+replicaCount: 1
+
