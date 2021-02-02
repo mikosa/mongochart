@@ -1,29 +1,29 @@
-# deploy mongodb operator
+## deploy mongodb operator
 ```
 helm install mongodb-operator ./path-to/mongodb-operator
 ```
 
-# deploy mongodbservicetenant
+## deploy mongodbservicetenant
 ```
 kubectl apply -f mongodbservicetenant.yaml
 ```
 
-# deploy tenant1
+## deploy tenant1
 ```
 kubectl apply -f tenant1.yaml
 ```
 
-# check composition
+## check composition
 ```
 kubectl connections MongoDBServiceTenant tenant1 default -o png --ignore=ServiceAccount:default
 ```
 
-# check policies
+## check policies
 ```
 kubectl get pods example-mongodb-0 -n ns1 -o json | jq -r '.spec.containers[0].resources'
 ```
 
-# check monitoring
+## check monitoring
 ### open terminal 1
 ```
 kubectl port-forward  kubeplus -n default 8081:8090
